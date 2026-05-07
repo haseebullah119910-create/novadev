@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haseeb Ullah | NovaDev AI Productivity</title>
+  <meta name="description" content="NovaDev AI is the premium developer productivity platform for coding faster, learning smarter, and organizing software workflows with AI-powered tools.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#home">NovaDev</a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#tools">Tools</a>
+        <a href="#learning">Learning</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#testimonials">Reviews</a>
+      </nav>
+      <div class="topbar-actions">
+        <button class="btn btn-ghost" id="themeToggle">Light</button>
+        <a class="btn btn-primary" href="#signup">Start Building</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <span class="eyebrow">AI Productivity for modern engineering teams</span>
+          <h1>Build faster, debug smarter, and ship with confidence.</h1>
+          <p>NovaDev blends AI-powered coding assistance, developer tools, learning paths, and productivity systems in a single premium platform crafted for software engineers.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#signup">Use AI Assistant</a>
+            <a class="btn btn-secondary" href="#tools">Explore Tools</a>
+          </div>
+          <div class="hero-metrics">
+            <div><strong>99.9%</strong><span>uptime</span></div>
+            <div><strong>30+</strong><span>developer tools</span></div>
+            <div><strong>16k</strong><span>engineers onboarded</span></div>
+          </div>
+        </div>
+        <div class="hero-preview">
+          <div class="preview-shell">
+            <div class="preview-topbar">
+              <span>NovaDev Dashboard</span>
+              <div class="mini-buttons"><span></span><span></span><span></span></div>
+            </div>
+            <div class="preview-content">
+              <div class="preview-panel">
+                <div class="panel-heading">
+                  <span>Live AI Assistant</span>
+                  <button class="chip">GPT-Dev</button>
+                </div>
+                <pre class="code-block"><code>const handleCreate = async () =&gt; {
+  const result = await nova.ai.optimize(code);
+  return result;
+};</code></pre>
+              </div>
+              <div class="preview-stats">
+                <div>
+                  <h3>Workflow Efficiency</h3>
+                  <p>+43% faster delivery</p>
+                </div>
+                <div>
+                  <h3>Issue Resolution</h3>
+                  <p>3x faster debugging</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section feature-grid" id="features">
+        <div class="section-intro">
+          <span class="eyebrow">Platform capabilities</span>
+          <h2>Everything developers need for high-velocity engineering.</h2>
+        </div>
+        <div class="features">
+          <article class="feature-card">
+            <h3>AI Coding Assistant</h3>
+            <p>Generate functions, explain code, debug issues, and refactor with AI guidance.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Developer Toolkit</h3>
+            <p>JSON formatter, regex tester, JWT decoder, API explorer, and more, all in one place.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Snippet Manager</h3>
+            <p>Save code snippets, organize by tags, and search instantly with syntax previews.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Learning Paths</h3>
+            <p>DSA drills, architecture notes, interview prep, and AI/ML roadmaps for career growth.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section dashboard-section" id="dashboard">
+        <div class="section-intro">
+          <span class="eyebrow">Dashboard preview</span>
+          <h2>Analytics, progress, and tools in a unified developer workspace.</h2>
+        </div>
+        <div class="dashboard-layout">
+          <div class="dashboard-main">
+            <div class="dashboard-header">
+              <div>
+                <p>Activity score</p>
+                <h3>87/100</h3>
+              </div>
+              <div class="status-pill">Live workspace</div>
+            </div>
+            <div class="dashboard-cards">
+              <div class="stat-card">
+                <span>Code reviews</span>
+                <strong>24</strong>
+              </div>
+              <div class="stat-card">
+                <span>Tasks closed</span>
+                <strong>18</strong>
+              </div>
+              <div class="stat-card">
+                <span>Learning streak</span>
+                <strong>9 days</strong>
+              </div>
+            </div>
+            <div class="chart-shell">
+              <div class="chart-legends">
+                <span>Commits</span><span>AI suggestions</span><span>Focus time</span>
+              </div>
+              <div class="chart-grid">
+                <span style="height: 76%"></span>
+                <span style="height: 84%"></span>
+                <span style="height: 64%"></span>
+                <span style="height: 92%"></span>
+                <span style="height: 58%"></span>
+                <span style="height: 70%"></span>
+                <span style="height: 82%"></span>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard-side">
+            <h3>Recent tools</h3>
+            <ul class="tool-list">
+              <li>Regex Tester</li>
+              <li>API Request Builder</li>
+              <li>Snippet Search</li>
+              <li>AI Error Explainer</li>
+            </ul>
+            <div class="panel-card">
+              <p>Next milestone</p>
+              <strong>Refactor auth flow</strong>
+              <span>Due in 2 days</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tools-section" id="tools">
+        <div class="section-intro">
+          <span class="eyebrow">Developer tools</span>
+          <h2>Speed up daily engineer workflows without leaving the platform.</h2>
+        </div>
+        <div class="tools-grid">
+          <article class="tool-card">
+            <h4>JSON Formatter</h4>
+            <p>Clean, validate, and compress JSON instantly.</p>
+          </article>
+          <article class="tool-card">
+            <h4>Regex Tester</h4>
+            <p>Build patterns with real-time results and syntax hints.</p>
+          </article>
+          <article class="tool-card">
+            <h4>JWT Decoder</h4>
+            <p>Inspect tokens and detect expiry in one click.</p>
+          </article>
+          <article class="tool-card">
+            <h4>API Explorer</h4>
+            <p>Test endpoints and inspect responses without leaving NovaDev.</p>
+          </article>
+          <article class="tool-card">
+            <h4>Snippet Library</h4>
+            <p>Bookmark reusable code, organize tags, and search fast.</p>
+          </article>
+          <article class="tool-card">
+            <h4>Markdown Preview</h4>
+            <p>Write docs with instant rendering and clean presentation.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section learning-section" id="learning">
+        <div class="section-intro">
+          <span class="eyebrow">Learning paths</span>
+          <h2>Curated developer journeys for every growth area.</h2>
+        </div>
+        <div class="learning-grid">
+          <article class="learning-card">
+            <h4>Frontend roadmap</h4>
+            <p>JS, React, performance, and production-ready UI patterns.</p>
+          </article>
+          <article class="learning-card">
+            <h4>Backend roadmap</h4>
+            <p>APIs, architecture, databases, and scalable systems.</p>
+          </article>
+          <article class="learning-card">
+            <h4>AI/ML roadmap</h4>
+            <p>Model design, data pipelines, prompt engineering, and deployment.</p>
+          </article>
+          <article class="learning-card">
+            <h4>DevOps roadmap</h4>
+            <p>Automation, monitoring, CI/CD, and cloud reliability.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section testimonial-section" id="testimonials">
+        <div class="section-intro">
+          <span class="eyebrow">Trusted by engineering teams</span>
+          <h2>Professional reviews from developers who rely on NovaDev daily.</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <p>"NovaDev is the only productivity suite our team uses for quick debugging and snippet management. The AI suggestions feel like an experienced pair programmer."</p>
+            <strong>Priya S.</strong>
+            <span>Engineering Lead</span>
+          </article>
+          <article class="testimonial-card">
+            <p>"The dashboard is clean, fast, and gives me the metrics I care about. The learning paths helped our junior developers become self-sufficient in weeks."</p>
+            <strong>Marco G.</strong>
+            <span>Platform Engineer</span>
+          </article>
+          <article class="testimonial-card">
+            <p>"From JWT decoding to API testing, NovaDev replaced five different tools. It feels premium and polished, exactly what serious teams need."</p>
+            <strong>Leah T.</strong>
+            <span>Product Developer</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section cta-section" id="signup">
+        <div class="cta-card">
+          <div>
+            <span class="eyebrow">Ready to level up?</span>
+            <h2>Start your AI-powered developer workflow with NovaDev.</h2>
+          </div>
+          <a class="btn btn-primary btn-large" href="#">Sign up with GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-brand">
+        <h3>NovaDev</h3>
+        <p>Built by Haseeb Ullah for engineers who want a smarter workflow.</p>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#tools">Tools</a>
+          <a href="#learning">Learning</a>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <a href="#">Docs</a>
+          <a href="#">Community</a>
+          <a href="#">Status</a>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <a href="#">Contact</a>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
