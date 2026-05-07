@@ -352,6 +352,105 @@ button {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.tool-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: linear-gradient(135deg, rgba(93, 220, 255, 0.2), rgba(139, 109, 255, 0.2));
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+.tool-panel {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.tool-panel.active {
+  display: grid;
+}
+
+.tool-input-group,
+.tool-output-group {
+  border-radius: 28px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tool-input-group label,
+.tool-output-group label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+  color: var(--muted);
+}
+
+.tool-input-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(10, 14, 24, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #c6d7ff;
+  font-family: 'SFMono-Regular', menlo, monospace;
+  font-size: 0.9rem;
+  resize: vertical;
+  outline: none;
+}
+
+.tool-input-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.tool-input-group textarea:focus {
+  border-color: var(--accent);
+  background: rgba(10, 14, 24, 0.98);
+}
+
+.tool-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.tool-output-group pre {
+  margin: 0;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(10, 14, 24, 0.94);
+  color: #c6d7ff;
+  font-family: 'SFMono-Regular', menlo, monospace;
+  font-size: 0.85rem;
+  max-height: 400px;
+  overflow-y: auto;
+  line-height: 1.5;
+}
+
+.tool-output-group code {
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 .dashboard-layout {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
@@ -579,6 +678,10 @@ button {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .tool-panel {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -591,6 +694,19 @@ button {
   .testimonial-card,
   .cta-card {
     padding: 22px;
+  }
+
+  .tool-tabs {
+    gap: 8px;
+  }
+
+  .tool-input-group,
+  .tool-output-group {
+    padding: 20px;
+  }
+
+  .tool-panel {
+    gap: 18px;
   }
 
   .hero-metrics,

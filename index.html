@@ -110,22 +110,22 @@
             <div class="dashboard-header">
               <div>
                 <p>Activity score</p>
-                <h3>87/100</h3>
+                <h3 id="activityScore">87/100</h3>
               </div>
               <div class="status-pill">Live workspace</div>
             </div>
             <div class="dashboard-cards">
               <div class="stat-card">
                 <span>Code reviews</span>
-                <strong>24</strong>
+                <strong id="codeReviews">24</strong>
               </div>
               <div class="stat-card">
                 <span>Tasks closed</span>
-                <strong>18</strong>
+                <strong id="tasksClosed">18</strong>
               </div>
               <div class="stat-card">
                 <span>Learning streak</span>
-                <strong>9 days</strong>
+                <strong id="streak">9 days</strong>
               </div>
             </div>
             <div class="chart-shell">
@@ -165,31 +165,51 @@
           <span class="eyebrow">Developer tools</span>
           <h2>Speed up daily engineer workflows without leaving the platform.</h2>
         </div>
-        <div class="tools-grid">
-          <article class="tool-card">
-            <h4>JSON Formatter</h4>
-            <p>Clean, validate, and compress JSON instantly.</p>
-          </article>
-          <article class="tool-card">
-            <h4>Regex Tester</h4>
-            <p>Build patterns with real-time results and syntax hints.</p>
-          </article>
-          <article class="tool-card">
-            <h4>JWT Decoder</h4>
-            <p>Inspect tokens and detect expiry in one click.</p>
-          </article>
-          <article class="tool-card">
-            <h4>API Explorer</h4>
-            <p>Test endpoints and inspect responses without leaving NovaDev.</p>
-          </article>
-          <article class="tool-card">
-            <h4>Snippet Library</h4>
-            <p>Bookmark reusable code, organize tags, and search fast.</p>
-          </article>
-          <article class="tool-card">
-            <h4>Markdown Preview</h4>
-            <p>Write docs with instant rendering and clean presentation.</p>
-          </article>
+        
+        <div class="tool-tabs">
+          <button class="tab-btn active" data-tool="json">JSON Formatter</button>
+          <button class="tab-btn" data-tool="jwt">JWT Decoder</button>
+          <button class="tab-btn" data-tool="ai">AI Assistant</button>
+        </div>
+
+        <div class="tool-panel active" id="json-tool">
+          <div class="tool-input-group">
+            <label>Paste JSON</label>
+            <textarea id="jsonInput" placeholder='{"name": "NovaDev", "version": "1.0"}' rows="6"></textarea>
+            <div class="tool-actions">
+              <button class="btn btn-secondary" id="formatBtn">Format JSON</button>
+              <button class="btn btn-secondary" id="compressBtn">Compress</button>
+              <button class="btn btn-secondary" id="copyJsonBtn">Copy Result</button>
+            </div>
+          </div>
+          <div class="tool-output-group">
+            <label>Formatted Output</label>
+            <pre id="jsonOutput"><code>// Output appears here</code></pre>
+          </div>
+        </div>
+
+        <div class="tool-panel" id="jwt-tool">
+          <div class="tool-input-group">
+            <label>Paste JWT Token</label>
+            <textarea id="jwtInput" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." rows="4"></textarea>
+            <button class="btn btn-secondary" id="decodeBtn">Decode</button>
+          </div>
+          <div class="tool-output-group">
+            <label>Decoded Header & Payload</label>
+            <pre id="jwtOutput"><code>// Decoded data appears here</code></pre>
+          </div>
+        </div>
+
+        <div class="tool-panel" id="ai-tool">
+          <div class="tool-input-group">
+            <label>Prompt (Ask AI to help)</label>
+            <textarea id="aiInput" placeholder="e.g., Write a function to validate email addresses" rows="4"></textarea>
+            <button class="btn btn-secondary" id="sendBtn">Send to GPT-Dev</button>
+          </div>
+          <div class="tool-output-group">
+            <label>AI Response (simulated)</label>
+            <pre id="aiOutput"><code>// AI suggestions appear here</code></pre>
+          </div>
         </div>
       </section>
 
