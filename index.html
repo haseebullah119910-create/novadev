@@ -17,260 +17,488 @@
       <nav class="nav-links">
         <a href="#features">Features</a>
         <a href="#tools">Tools</a>
+        <a href="#backend">Backend</a>
+        <a href="#ai-ml">AI/ML</a>
         <a href="#learning">Learning</a>
         <a href="#dashboard">Dashboard</a>
         <a href="#testimonials">Reviews</a>
       </nav>
-      <div class="topbar-actions">
-        <button class="btn btn-ghost" id="themeToggle">Light</button>
-        <a class="btn btn-primary" href="#signup">Start Building</a>
+      <div class="topbar-meta">
+        <button class="btn btn-ghost" id="themeToggle" type="button">Light</button>
+        <span class="auth-chip" id="authStatus">Guest</span>
       </div>
     </header>
 
-    <main>
-      <section class="hero" id="home">
-        <div class="hero-copy">
-          <span class="eyebrow">AI Productivity for modern engineering teams</span>
-          <h1>Build faster, debug smarter, and ship with confidence.</h1>
-          <p>NovaDev blends AI-powered coding assistance, developer tools, learning paths, and productivity systems in a single premium platform crafted for software engineers.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#signup">Use AI Assistant</a>
-            <a class="btn btn-secondary" href="#tools">Explore Tools</a>
-          </div>
-          <div class="hero-metrics">
-            <div><strong>99.9%</strong><span>uptime</span></div>
-            <div><strong>30+</strong><span>developer tools</span></div>
-            <div><strong>16k</strong><span>engineers onboarded</span></div>
-          </div>
-        </div>
-        <div class="hero-preview">
-          <div class="preview-shell">
-            <div class="preview-topbar">
-              <span>NovaDev Dashboard</span>
-              <div class="mini-buttons"><span></span><span></span><span></span></div>
+    <!-- Router Container -->
+    <main id="router-container">
+      <!-- Home Page -->
+      <div id="home-page" class="page active">
+        <section class="section hero">
+          <div class="hero-copy">
+            <span class="eyebrow">AI Productivity for modern engineering teams</span>
+            <h1>Build faster, debug smarter, and ship with confidence.</h1>
+            <p>NovaDev blends AI-powered coding assistance, developer tools, learning paths, and productivity systems in a single premium platform crafted for software engineers.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#signup">Use AI Assistant</a>
+              <a class="btn btn-secondary" href="#tools">Explore Tools</a>
             </div>
-            <div class="preview-content">
-              <div class="preview-panel">
-                <div class="panel-heading">
-                  <span>Live AI Assistant</span>
-                  <button class="chip">GPT-Dev</button>
-                </div>
-                <pre class="code-block"><code>const handleCreate = async () =&gt; {
-  const result = await nova.ai.optimize(code);
-  return result;
-};</code></pre>
+            <div class="hero-metrics">
+              <div><strong>99.9%</strong><span>uptime</span></div>
+              <div><strong>30+</strong><span>developer tools</span></div>
+              <div><strong>16k</strong><span>engineers onboarded</span></div>
+            </div>
+          </div>
+          <div class="hero-preview">
+            <div class="preview-shell">
+              <div class="preview-topbar">
+                <span>NovaDev Dashboard</span>
+                <div class="mini-buttons"><span></span><span></span><span></span></div>
               </div>
-              <div class="preview-stats">
+              <div class="preview-content">
+                <div class="preview-panel">
+                  <div class="panel-heading">
+                    <span>Live AI Assistant</span>
+                    <button class="chip">GPT-Dev</button>
+                  </div>
+                  <div class="terminal-shell">
+                    <pre id="terminalOutput" class="terminal-output"><code>// GPT-Dev terminal ready. Type a question in the field below and press Enter.</code></pre>
+                    <input id="terminalInput" class="terminal-input" type="text" placeholder="Ask GPT-Dev about your code..." aria-label="Ask GPT-Dev">
+                  </div>
+                </div>
+                <div class="preview-stats">
+                  <div>
+                    <h3>Workflow Efficiency</h3>
+                    <p>+43% faster delivery</p>
+                  </div>
+                  <div>
+                    <h3>Issue Resolution</h3>
+                    <p>3x faster debugging</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section feature-grid" id="features">
+          <div class="section-intro">
+            <span class="eyebrow">Platform capabilities</span>
+            <h2>Everything developers need for high-velocity engineering.</h2>
+          </div>
+          <div class="features">
+            <article class="feature-card">
+              <h3>AI Coding Assistant</h3>
+              <p>Generate functions, explain code, debug issues, and refactor with AI guidance.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Developer Toolkit</h3>
+              <p>JSON formatter, regex tester, JWT decoder, API explorer, and more, all in one place.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Snippet Manager</h3>
+              <p>Save code snippets, organize by tags, and search instantly with syntax previews.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Learning Paths</h3>
+              <p>DSA drills, architecture notes, interview prep, and AI/ML roadmaps for career growth.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section platform-section" id="platform">
+          <div class="section-intro">
+            <span class="eyebrow">Core learning architecture</span>
+            <h2>How this platform is built: frontend, backend, editor runtime, and delivery.</h2>
+          </div>
+          <div class="platform-grid">
+            <article class="feature-card">
+              <h3>Frontend</h3>
+              <p>HTML defines structure, CSS controls styling and responsive layouts, and JavaScript adds interactivity. This page uses all three to render the learning experience in the browser.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Backend</h3>
+              <p>The brain of the platform would normally run on a server using PHP, Node.js, or ASP.NET, and connect to databases like MySQL or SQL Server to store progress, scores, and tutorial content.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Try It Yourself Editor</h3>
+              <p>Interactive code exercises render inside an <code>&lt;iframe&gt;</code>. When you click Run, JavaScript updates the iframe source so the code executes safely in the browser.</p>
+            </article>
+            <article class="feature-card">
+              <h3>Content Delivery</h3>
+              <p>Fast sites use CDNs such as Cloudflare to deliver assets globally. That’s how tutorials, images, and editor resources load quickly no matter where your users are.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section dashboard-section" id="dashboard">
+          <div class="section-intro">
+            <span class="eyebrow">Dashboard preview</span>
+            <h2>Analytics, progress, and tools in a unified developer workspace.</h2>
+          </div>
+          <div class="dashboard-layout">
+            <div class="dashboard-main">
+              <div class="dashboard-header">
                 <div>
-                  <h3>Workflow Efficiency</h3>
-                  <p>+43% faster delivery</p>
+                  <p>Activity score</p>
+                  <h3 id="activityScore">87/100</h3>
                 </div>
-                <div>
-                  <h3>Issue Resolution</h3>
-                  <p>3x faster debugging</p>
+                <div class="status-pill">Live workspace</div>
+              </div>
+              <div class="dashboard-cards">
+                <div class="stat-card">
+                  <span>Code reviews</span>
+                  <strong id="codeReviews">24</strong>
+                </div>
+                <div class="stat-card">
+                  <span>Tasks closed</span>
+                  <strong id="tasksClosed">18</strong>
+                </div>
+                <div class="stat-card">
+                  <span>Learning streak</span>
+                  <strong id="streak">9 days</strong>
+                </div>
+              </div>
+              <div class="chart-shell">
+                <div class="chart-legends">
+                  <span>Commits</span><span>AI suggestions</span><span>Focus time</span>
+                </div>
+                <div class="chart-grid">
+                  <span style="height: 76%"></span>
+                  <span style="height: 84%"></span>
+                  <span style="height: 64%"></span>
+                  <span style="height: 92%"></span>
+                  <span style="height: 58%"></span>
+                  <span style="height: 70%"></span>
+                  <span style="height: 82%"></span>
+                </div>
+              </div>
+            </div>
+            <div class="dashboard-side">
+              <h3>Recent tools</h3>
+              <ul class="tool-list">
+                <li>Regex Tester</li>
+                <li>API Request Builder</li>
+                <li>Snippet Search</li>
+                <li>AI Error Explainer</li>
+              </ul>
+              <div class="panel-card">
+                <p>Next milestone</p>
+                <strong>Refactor auth flow</strong>
+                <span>Due in 2 days</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section tools-section" id="tools">
+          <div class="section-intro">
+            <span class="eyebrow">Developer tools</span>
+            <h2>Speed up daily engineer workflows without leaving the platform.</h2>
+          </div>
+          
+          <div class="tool-launch-grid">
+            <button class="tool-launch-card" type="button" data-open-tool="json">
+              <h5>JSON Formatter</h5>
+              <p>Paste raw JSON to validate and prettify with one click.</p>
+            </button>
+            <button class="tool-launch-card" type="button" data-open-tool="jwt">
+              <h5>JWT Decoder</h5>
+              <p>Decode header and payload instantly without external libs.</p>
+            </button>
+            <button class="tool-launch-card" type="button" data-open-tool="ai">
+              <h5>AI Assistant</h5>
+              <p>Send a prompt and get a simulated response in the terminal.</p>
+            </button>
+          </div>
+
+          <div class="tool-tabs">
+            <button class="tab-btn active" data-tool="json">JSON Formatter</button>
+            <button class="tab-btn" data-tool="jwt">JWT Decoder</button>
+            <button class="tab-btn" data-tool="ai">AI Assistant</button>
+          </div>
+
+          <div class="tool-panel active" id="json-tool">
+            <div class="tool-input-group">
+              <label>Paste JSON</label>
+              <textarea id="jsonInput" placeholder='{"name": "NovaDev", "version": "1.0"}' rows="6"></textarea>
+              <div class="tool-actions">
+                <button class="btn btn-secondary" id="formatBtn">Format JSON</button>
+                <button class="btn btn-secondary" id="compressBtn">Compress</button>
+                <button class="btn btn-secondary" id="copyJsonBtn">Copy Result</button>
+              </div>
+            </div>
+            <div class="tool-output-group">
+              <label>Formatted Output</label>
+              <pre id="jsonOutput"><code>// Output appears here</code></pre>
+            </div>
+          </div>
+
+          <div class="tool-panel" id="jwt-tool">
+            <div class="tool-input-group">
+              <label>Paste JWT Token</label>
+              <textarea id="jwtInput" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." rows="4"></textarea>
+              <button class="btn btn-secondary" id="decodeBtn">Decode</button>
+            </div>
+            <div class="tool-output-group">
+              <label>Decoded Header & Payload</label>
+              <pre id="jwtOutput"><code>// Decoded data appears here</code></pre>
+            </div>
+          </div>
+
+          <div class="tool-panel" id="ai-tool">
+            <div class="tool-input-group">
+              <label>Prompt (Ask AI to help)</label>
+              <textarea id="aiInput" placeholder="e.g., Write a function to validate email addresses" rows="4"></textarea>
+              <button class="btn btn-secondary" id="sendBtn">Send to GPT-Dev</button>
+            </div>
+            <div class="tool-output-group">
+              <label>AI Response (simulated)</label>
+              <pre id="aiOutput"><code>// AI suggestions appear here</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section class="section backend-section" id="backend">
+          <div class="section-intro">
+            <span class="eyebrow">Backend & Database</span>
+            <h2>Powerful tools for server-side development and data management.</h2>
+          </div>
+          <div class="backend-showcase">
+            <div class="backend-demo">
+              <div class="code-preview">
+                <div class="code-header">
+                  <span>Express.js API Server</span>
+                  <div class="code-buttons"><span></span><span></span><span></span></div>
+                </div>
+                <pre><code>const express = require('express');
+const mongoose = require('mongoose');
+
+const app = express();
+app.use(express.json());
+
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost/novadev', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+
+// User model
+const User = mongoose.model('User', {
+  name: String,
+  email: String,
+  role: { type: String, default: 'developer' }
+});
+
+// API endpoints
+app.get('/api/users', async (req, res) => {
+  const users = await User.find();
+  res.json(users);
+});
+
+app.post('/api/users', async (req, res) => {
+  const user = new User(req.body);
+  await user.save();
+  res.status(201).json(user);
+});
+
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});</code></pre>
+              </div>
+              <div class="backend-features">
+                <h3>Full-Stack API Development</h3>
+                <ul>
+                  <li>RESTful API design with Express.js</li>
+                  <li>MongoDB integration with Mongoose ODM</li>
+                  <li>JWT authentication & authorization</li>
+                  <li>Real-time data with WebSockets</li>
+                  <li>Database migrations & seeding</li>
+                </ul>
+              </div>
+            </div>
+            <div class="database-tools">
+              <h3>Database Management Tools</h3>
+              <div class="db-tool-grid">
+                <div class="db-tool">
+                  <h4>SQL Query Builder</h4>
+                  <p>Visual SQL query construction with syntax highlighting and auto-completion.</p>
+                </div>
+                <div class="db-tool">
+                  <h4>Schema Designer</h4>
+                  <p>Design database schemas with drag-and-drop interface and relationship mapping.</p>
+                </div>
+                <div class="db-tool">
+                  <h4>Data Migration</h4>
+                  <p>Automated database migrations with rollback support and version control.</p>
+                </div>
+                <div class="db-tool">
+                  <h4>Performance Monitor</h4>
+                  <p>Real-time query performance analysis and optimization recommendations.</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="section feature-grid" id="features">
-        <div class="section-intro">
-          <span class="eyebrow">Platform capabilities</span>
-          <h2>Everything developers need for high-velocity engineering.</h2>
-        </div>
-        <div class="features">
-          <article class="feature-card">
-            <h3>AI Coding Assistant</h3>
-            <p>Generate functions, explain code, debug issues, and refactor with AI guidance.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Developer Toolkit</h3>
-            <p>JSON formatter, regex tester, JWT decoder, API explorer, and more, all in one place.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Snippet Manager</h3>
-            <p>Save code snippets, organize by tags, and search instantly with syntax previews.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Learning Paths</h3>
-            <p>DSA drills, architecture notes, interview prep, and AI/ML roadmaps for career growth.</p>
-          </article>
-        </div>
-      </section>
+        <section class="section ai-section" id="ai-ml">
+          <div class="section-intro">
+            <span class="eyebrow">AI/ML Development</span>
+            <h2>Build intelligent applications with machine learning and AI tools.</h2>
+          </div>
+          <div class="ai-showcase">
+            <div class="ai-demo">
+              <div class="code-preview">
+                <div class="code-header">
+                  <span>TensorFlow Model Training</span>
+                  <div class="code-buttons"><span></span><span></span><span></span></div>
+                </div>
+                <pre><code>import tensorflow as tf
+from tensorflow import keras
+import numpy as np
 
-      <section class="section dashboard-section" id="dashboard">
-        <div class="section-intro">
-          <span class="eyebrow">Dashboard preview</span>
-          <h2>Analytics, progress, and tools in a unified developer workspace.</h2>
-        </div>
-        <div class="dashboard-layout">
-          <div class="dashboard-main">
-            <div class="dashboard-header">
-              <div>
-                <p>Activity score</p>
-                <h3 id="activityScore">87/100</h3>
+# Load and preprocess data
+(x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
+x_train = x_train.astype('float32') / 255.0
+x_test = x_test.astype('float32') / 255.0
+
+# Build neural network model
+model = keras.Sequential([
+    keras.layers.Flatten(input_shape=(28, 28)),
+    keras.layers.Dense(128, activation='relu'),
+    keras.layers.Dropout(0.2),
+    keras.layers.Dense(10, activation='softmax')
+])
+
+# Compile and train
+model.compile(optimizer='adam',
+              loss='sparse_categorical_crossentropy',
+              metrics=['accuracy'])
+
+model.fit(x_train, y_train, epochs=5, validation_split=0.1)
+
+# Evaluate
+test_loss, test_acc = model.evaluate(x_test, y_test)
+print(f'Test accuracy: {test_acc:.4f}')
+
+# Save model
+model.save('digit_classifier.h5')</code></pre>
               </div>
-              <div class="status-pill">Live workspace</div>
-            </div>
-            <div class="dashboard-cards">
-              <div class="stat-card">
-                <span>Code reviews</span>
-                <strong id="codeReviews">24</strong>
-              </div>
-              <div class="stat-card">
-                <span>Tasks closed</span>
-                <strong id="tasksClosed">18</strong>
-              </div>
-              <div class="stat-card">
-                <span>Learning streak</span>
-                <strong id="streak">9 days</strong>
-              </div>
-            </div>
-            <div class="chart-shell">
-              <div class="chart-legends">
-                <span>Commits</span><span>AI suggestions</span><span>Focus time</span>
-              </div>
-              <div class="chart-grid">
-                <span style="height: 76%"></span>
-                <span style="height: 84%"></span>
-                <span style="height: 64%"></span>
-                <span style="height: 92%"></span>
-                <span style="height: 58%"></span>
-                <span style="height: 70%"></span>
-                <span style="height: 82%"></span>
+              <div class="ai-features">
+                <h3>Complete ML Workflow</h3>
+                <ul>
+                  <li>TensorFlow & PyTorch integration</li>
+                  <li>AutoML model generation</li>
+                  <li>Data preprocessing pipelines</li>
+                  <li>Model deployment & monitoring</li>
+                  <li>Computer vision & NLP tools</li>
+                </ul>
               </div>
             </div>
-          </div>
-          <div class="dashboard-side">
-            <h3>Recent tools</h3>
-            <ul class="tool-list">
-              <li>Regex Tester</li>
-              <li>API Request Builder</li>
-              <li>Snippet Search</li>
-              <li>AI Error Explainer</li>
-            </ul>
-            <div class="panel-card">
-              <p>Next milestone</p>
-              <strong>Refactor auth flow</strong>
-              <span>Due in 2 days</span>
+            <div class="ml-tools">
+              <h3>AI/ML Development Tools</h3>
+              <div class="ml-tool-grid">
+                <div class="ml-tool">
+                  <h4>Model Builder</h4>
+                  <p>Visual neural network designer with drag-and-drop layers and real-time training visualization.</p>
+                </div>
+                <div class="ml-tool">
+                  <h4>Data Analyzer</h4>
+                  <p>Automated data exploration, feature engineering, and correlation analysis tools.</p>
+                </div>
+                <div class="ml-tool">
+                  <h4>Experiment Tracker</h4>
+                  <p>Version control for ML experiments with hyperparameter tuning and model comparison.</p>
+                </div>
+                <div class="ml-tool">
+                  <h4>API Generator</h4>
+                  <p>One-click deployment of trained models as REST APIs with automatic scaling.</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="section tools-section" id="tools">
-        <div class="section-intro">
-          <span class="eyebrow">Developer tools</span>
-          <h2>Speed up daily engineer workflows without leaving the platform.</h2>
-        </div>
-        
-        <div class="tool-tabs">
-          <button class="tab-btn active" data-tool="json">JSON Formatter</button>
-          <button class="tab-btn" data-tool="jwt">JWT Decoder</button>
-          <button class="tab-btn" data-tool="ai">AI Assistant</button>
-        </div>
+        <section class="section learning-section" id="learning">
+          <div class="section-intro">
+            <span class="eyebrow">Learning paths</span>
+            <h2>Curated developer journeys for every growth area.</h2>
+          </div>
+          <div class="learning-grid">
+            <article class="learning-card" data-course="web-dev">
+              <h4>Web Development</h4>
+              <p>Master HTML, CSS, JavaScript, React, Vue, and modern UI frameworks. Build responsive, accessible web applications.</p>
+              <a href="#course/web-dev" class="btn btn-primary btn-small">Start Learning</a>
+            </article>
+            <article class="learning-card" data-course="app-dev">
+              <h4>App Development</h4>
+              <p>React Native, Flutter, iOS/Swift, Android/Kotlin. Cross-platform development and native performance.</p>
+              <a href="#course/app-dev" class="btn btn-primary btn-small">Start Learning</a>
+            </article>
+            <article class="learning-card" data-course="ai-ml">
+              <h4>AI & Machine Learning</h4>
+              <p>Python, TensorFlow, PyTorch, scikit-learn. Machine learning algorithms and deep learning.</p>
+              <a href="#course/ai-ml" class="btn btn-primary btn-small">Start Learning</a>
+            </article>
+            <article class="learning-card" data-course="databases">
+              <h4>Databases</h4>
+              <p>SQL, NoSQL, MongoDB, PostgreSQL. Master data modeling, query optimization, and distributed systems.</p>
+              <a href="#course/databases" class="btn btn-primary btn-small">Start Learning</a>
+            </article>
+            <article class="learning-card">
+              <h4>Backend Development</h4>
+              <p>Node.js, Python, Java, APIs, microservices, and serverless architecture.</p>
+            </article>
+            <article class="learning-card">
+              <h4>Full-Stack Development</h4>
+              <p>End-to-end application development combining frontend, backend, databases, and deployment.</p>
+            </article>
+          </div>
+        </section>
 
-        <div class="tool-panel active" id="json-tool">
-          <div class="tool-input-group">
-            <label>Paste JSON</label>
-            <textarea id="jsonInput" placeholder='{"name": "NovaDev", "version": "1.0"}' rows="6"></textarea>
-            <div class="tool-actions">
-              <button class="btn btn-secondary" id="formatBtn">Format JSON</button>
-              <button class="btn btn-secondary" id="compressBtn">Compress</button>
-              <button class="btn btn-secondary" id="copyJsonBtn">Copy Result</button>
+        <section class="section testimonial-section" id="testimonials">
+          <div class="section-intro">
+            <span class="eyebrow">Trusted by engineering teams</span>
+            <h2>Professional reviews from developers who rely on NovaDev daily.</h2>
+          </div>
+          <div class="testimonial-grid">
+            <article class="testimonial-card">
+              <p>"NovaDev is the only productivity suite our team uses for quick debugging and snippet management. The AI suggestions feel like an experienced pair programmer."</p>
+              <strong>Priya S.</strong>
+              <span>Engineering Lead</span>
+            </article>
+            <article class="testimonial-card">
+              <p>"The dashboard is clean, fast, and gives me the metrics I care about. The learning paths helped our junior developers become self-sufficient in weeks."</p>
+              <strong>Marco G.</strong>
+              <span>Platform Engineer</span>
+            </article>
+            <article class="testimonial-card">
+              <p>"From JWT decoding to API testing, NovaDev replaced five different tools. It feels premium and polished, exactly what serious teams need."</p>
+              <strong>Leah T.</strong>
+              <span>Product Developer</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="section cta-section" id="signup">
+          <div class="cta-card">
+            <div>
+              <span class="eyebrow">Ready to level up?</span>
+              <h2>Start your AI-powered developer workflow with NovaDev.</h2>
             </div>
+            <button class="btn btn-primary btn-large" id="githubLoginBtn" type="button">Sign up with GitHub</button>
           </div>
-          <div class="tool-output-group">
-            <label>Formatted Output</label>
-            <pre id="jsonOutput"><code>// Output appears here</code></pre>
-          </div>
-        </div>
+        </section>
+      </div>
 
-        <div class="tool-panel" id="jwt-tool">
-          <div class="tool-input-group">
-            <label>Paste JWT Token</label>
-            <textarea id="jwtInput" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." rows="4"></textarea>
-            <button class="btn btn-secondary" id="decodeBtn">Decode</button>
-          </div>
-          <div class="tool-output-group">
-            <label>Decoded Header & Payload</label>
-            <pre id="jwtOutput"><code>// Decoded data appears here</code></pre>
-          </div>
+      <!-- Course Pages -->
+      <div id="course-page" class="page">
+        <div class="course-header">
+          <button class="btn btn-ghost back-btn" id="backToHome">← Back to Home</button>
+          <h1 id="courseTitle">Course Title</h1>
+          <p id="courseDescription">Course description</p>
         </div>
-
-        <div class="tool-panel" id="ai-tool">
-          <div class="tool-input-group">
-            <label>Prompt (Ask AI to help)</label>
-            <textarea id="aiInput" placeholder="e.g., Write a function to validate email addresses" rows="4"></textarea>
-            <button class="btn btn-secondary" id="sendBtn">Send to GPT-Dev</button>
-          </div>
-          <div class="tool-output-group">
-            <label>AI Response (simulated)</label>
-            <pre id="aiOutput"><code>// AI suggestions appear here</code></pre>
-          </div>
-        </div>
-      </section>
-
-      <section class="section learning-section" id="learning">
-        <div class="section-intro">
-          <span class="eyebrow">Learning paths</span>
-          <h2>Curated developer journeys for every growth area.</h2>
-        </div>
-        <div class="learning-grid">
-          <article class="learning-card">
-            <h4>Frontend roadmap</h4>
-            <p>JS, React, performance, and production-ready UI patterns.</p>
-          </article>
-          <article class="learning-card">
-            <h4>Backend roadmap</h4>
-            <p>APIs, architecture, databases, and scalable systems.</p>
-          </article>
-          <article class="learning-card">
-            <h4>AI/ML roadmap</h4>
-            <p>Model design, data pipelines, prompt engineering, and deployment.</p>
-          </article>
-          <article class="learning-card">
-            <h4>DevOps roadmap</h4>
-            <p>Automation, monitoring, CI/CD, and cloud reliability.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section testimonial-section" id="testimonials">
-        <div class="section-intro">
-          <span class="eyebrow">Trusted by engineering teams</span>
-          <h2>Professional reviews from developers who rely on NovaDev daily.</h2>
-        </div>
-        <div class="testimonial-grid">
-          <article class="testimonial-card">
-            <p>"NovaDev is the only productivity suite our team uses for quick debugging and snippet management. The AI suggestions feel like an experienced pair programmer."</p>
-            <strong>Priya S.</strong>
-            <span>Engineering Lead</span>
-          </article>
-          <article class="testimonial-card">
-            <p>"The dashboard is clean, fast, and gives me the metrics I care about. The learning paths helped our junior developers become self-sufficient in weeks."</p>
-            <strong>Marco G.</strong>
-            <span>Platform Engineer</span>
-          </article>
-          <article class="testimonial-card">
-            <p>"From JWT decoding to API testing, NovaDev replaced five different tools. It feels premium and polished, exactly what serious teams need."</p>
-            <strong>Leah T.</strong>
-            <span>Product Developer</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="section cta-section" id="signup">
-        <div class="cta-card">
-          <div>
-            <span class="eyebrow">Ready to level up?</span>
-            <h2>Start your AI-powered developer workflow with NovaDev.</h2>
-          </div>
-          <a class="btn btn-primary btn-large" href="#">Sign up with GitHub</a>
-        </div>
-      </section>
+        <div id="courseContent"></div>
+      </div>
     </main>
 
     <footer class="footer">
